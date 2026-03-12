@@ -1,4 +1,3 @@
-source ~/.forterrc
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
@@ -149,6 +148,38 @@ alias reset='source ~/.zshrc;echo "ZSH aliases sourced."'
 alias awsconfig='code ~/.aws/config'
 alias aws-sso='aws --profile sso sso login'
 
+# YouTube video downloader
+# brew install ffmpeg
+# brew install yt-dlp
+alias youtube='yt-dlp \
+  -f "bestvideo+bestaudio" \
+  --merge-output-format mp4 \
+  --output "~/Downloads/youtube/%(title)s-%(id)s.%(ext)s" \
+  --embed-thumbnail \
+  --add-metadata \
+  --concurrent-fragments 16 \
+  --ignore-errors \
+  --cookies-from-browser firefox'
+
+alias youtube-720='yt-dlp \
+  -f "bestvideo[height<=720]+bestaudio/best[height<=720]" \
+  --merge-output-format mp4 \
+  --output "~/Downloads/youtube/%(title)s-%(id)s.%(ext)s" \
+  --embed-thumbnail \
+  --add-metadata \
+  --concurrent-fragments 16 \
+  --ignore-errors \
+  --cookies-from-browser firefox'
+
+alias youtube-audio='yt-dlp \
+  -f "bestaudio[ext=m4a]/bestaudio" \
+  --output "~/Downloads/youtube/%(title)s-%(id)s.%(ext)s" \
+  --embed-thumbnail \
+  --add-metadata \
+  --concurrent-fragments 16 \
+  --ignore-errors \
+  --cookies-from-browser firefox'
+
 # Docker
 alias docker-stop-all='docker stop $(docker ps -q)'
 
@@ -161,26 +192,12 @@ lsofport() {
   fi
 }
 
-# Manage Python in mac
-# install "brew install pyenv" for python version manager
-# "pyenv versions" to check all installed version
-# Set global python version like this: "pyenv global 2.7.18"
-eval "$(pyenv init --path)"
-# eval "$(direnv hook zsh)"
+eval "$(direnv hook zsh)"
 
-
-# add webstorm to the path
-export PATH="$PATH:/Applications/WebStorm.app/Contents/MacOS"
-alias webstorm="webstorm -n"
 alias update-packages="npx npm-check-updates"
 alias sort-package-json="npx sort-package-json"
 alias npkill="npx npkill"
 alias pn="pnpm"
-
-
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/mohamad.khaleqi/.lmstudio/bin"
-
 
 # eval "$(oh-my-posh init zsh --config $HOME/.oh-my-posh.toml)"
 
@@ -188,8 +205,19 @@ if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
     eval "$(oh-my-posh init zsh --config $HOME/.oh-my-posh.toml)"
 fi
 
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/mohamad.khaleqi/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-
 eval "$(zoxide init --cmd cd zsh)"
+
+# eval "$(zoxide init zsh)"
+. "$HOME/.local/bin/env"
+
+alias python="uv run python"
+alias python3="uv run python"
+alias pip="uv run pip"
+
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/mehr/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
+
+eval "$(atuin init zsh)"
