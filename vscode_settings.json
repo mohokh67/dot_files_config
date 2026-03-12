@@ -1,0 +1,145 @@
+{
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.fontFamily": "Fira Code, victor Mono, Monaspace Krypton",
+    "editor.fontLigatures": true,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "editor.fontSize": 13,
+    "files.autoSave": "onFocusChange",
+    "editor.formatOnPaste": true,
+    "editor.autoClosingBrackets": "always",
+    "editor.autoIndentOnPaste": true,
+    "editor.minimap.autohide": "scroll",
+    "editor.minimap.enabled": false,
+    "explorer.confirmDragAndDrop": false,
+    "editor.formatOnSave": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "editor.lineHeight": 24,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "emphasis",
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": "strong",
+                "settings": {
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": "entity.other.attribute-name",
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": "markup.underline",
+                "settings": {
+                    "fontStyle": "underline"
+                }
+            },
+            {
+                "scope": "markup.bold",
+                "settings": {
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": "markup.heading",
+                "settings": {
+                    "fontStyle": "bold"
+                }
+            },
+            {
+                "scope": "markup.italic",
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "String interpolation",
+                "scope": [
+                    "punctuation.definition.template-expression.begin",
+                    "punctuation.definition.template-expression.end",
+                    "punctuation.section.embedded"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "this.self",
+                "scope": "variable.language",
+                "settings": {
+                    "fontStyle": "italic",
+                    "foreground": "#ff5874"
+                }
+            },
+            {
+                "name": "@Decorator",
+                "scope": [
+                    "meta.decorator punctuation.decorator"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": [
+                    "punctuation.definition.comment",
+                    "comment"
+                ],
+                "settings": {
+                    // "foreground": "#ff5874",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": [
+                    //following will be in italic =FlottFlott
+                    "entity.name.type.class", //class names
+                    "keyword", //import, export, return…
+                    "constant", //String, Number, Boolean…, this, super
+                    "storage.modifier", //static keyword
+                    "storage.type",
+                    "storage.type.class.js", //class keyword
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": [
+                    //following will be excluded from italics VSCode has some defaults for italics
+                    "invalid",
+                    "keyword.operator",
+                    "constant.numeric.css",
+                    "keyword.other.unit.px.css",
+                    "constant.numeric.decimal.js",
+                    "constant.numeric.json"
+                ],
+                "settings": {
+                    "fontStyle": ""
+                }
+            }
+        ]
+    },
+    "explorer.confirmDelete": false,
+    "workbench.startupEditor": "none",
+    "makefile.configureOnOpen": true,
+    "breadcrumbs.enabled": true,
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "git.replaceTagsWhenPull": true
+}
