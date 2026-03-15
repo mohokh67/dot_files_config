@@ -1,0 +1,24 @@
+# Put this file here:  $HOME/Library/Application\ Support/com.mitchellh.ghostty/config.ghostty
+theme = dark:Catppuccin Frappe,light:Catppuccin Latte
+
+font-family = JetBrainsMono Nerd Font
+font-size = 15
+
+window-padding-x = 10
+window-padding-y = 10
+window-padding-balance = true
+window-padding-color = extend
+
+macos-titlebar-style = transparent
+background-opacity = 0.96
+background-opacity-cells = true
+background-blur = 12
+
+cursor-style = block
+cursor-style-blink = false
+
+mouse-hide-while-typing = true
+confirm-close-surface = true
+
+shell-integration = detect
+shell-integration-features = sudo,title,ssh-env
