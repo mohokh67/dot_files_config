@@ -7,104 +7,23 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "git": {
-    "hunk_style": "staged_hollow",
-    "inline_blame": {
-      "show_commit_summary": true,
-      "padding": 7,
-    },
-    "gutter_debounce": 1,
-    "git_gutter": "tracked_files",
-    "disable_git": true,
-  },
-  "minimum_contrast_for_highlights": 50.0,
-  "unnecessary_code_fade": 0.5,
-  "cursor_shape": "block",
-  "multi_cursor_modifier": "cmd_or_ctrl",
-  "buffer_line_height": {
-    "custom": 1.8,
-  },
+  // =========================
+  // AI & Assistant Features
+  // =========================
   "agent_servers": {
-    "claude": {
+    "codex-acp": {
+      "type": "registry",
+      "default_model": "gpt-5.2-codex/high",
+      "favorite_models": ["gpt-5.2-codex/high"],
+    },
+    "claude-acp": {
+      "type": "registry",
       "favorite_config_option_values": {
         "mode": ["plan", "acceptEdits"],
       },
     },
-    "codex": {
-      "default_model": "gpt-5.2-codex/high",
-      "favorite_models": ["gpt-5.2-codex/high"],
-      "default_config_options": {},
-      "favorite_config_option_values": {},
-    },
-  },
-  "icon_theme": "Material Icon Theme",
-  "agent_ui_font_size": 21.0,
-  "telemetry": {
-    "diagnostics": false,
-    "metrics": false,
-  },
-  "session": {
-    "trust_all_worktrees": true,
-  },
-  "base_keymap": "VSCode",
-  "minimap": {
-    "show": "never",
-  },
-  // "autosave": "on_focus_change",
-  "buffer_font_fallbacks": ["Victor Mono", "Monaspace Krypton"],
-  "auto_indent_on_paste": true,
-  "ui_font_size": 23.0,
-  "buffer_font_size": 17.0,
-
-  "buffer_font_family": "Fira Code",
-  "buffer_font_features": {
-    "calt": true,
   },
 
-  ////////================================ New
-  "inlay_hints": {
-    "show_other_hints": false,
-    "show_parameter_hints": false,
-    "show_type_hints": false,
-    "show_value_hints": true,
-  },
-  // "ui_font_size": 16,
-  // "buffer_font_size": null,
-
-  // "buffer_font_features": {
-  //   "calt": false, // ligatures
-  // },
-  "lsp_document_colors": "border",
-  "wrap_guides": [79],
-  "show_edit_predictions": false,
-
-  // Theme & Colors
-  "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "Tokyo Night Storm",
-  },
-  "experimental.theme_overrides": {
-    "background.appearance": "transparent",
-    "syntax": {
-      "keyword": { "color": "#9D70FF" },
-      "function": { "color": "#BCBEC4" },
-    },
-  },
-
-  // =========================
-  // Editor Behavior
-  // =========================
-  "autosave": {
-    "after_delay": { "milliseconds": 500 },
-  },
-  "format_on_save": "on",
-  "restore_on_startup": "last_session",
-  "show_completions_on_input": true,
-
-  // =========================
-  // AI & Assistant Features
-  // =========================
   "agent": {
     "play_sound_when_agent_done": true,
     "inline_assistant_model": {
@@ -124,6 +43,72 @@
       "proxy_no_verify": null,
     },
   },
+
+  // =========================
+  // Editor Behavior
+  // =========================
+  "session": {
+    "trust_all_worktrees": true,
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": "Gruvbox Dark Hard",
+  "git": {
+    "hunk_style": "staged_hollow",
+    "inline_blame": {
+      "show_commit_summary": true,
+      "padding": 7,
+    },
+    "gutter_debounce": 1,
+    "git_gutter": "tracked_files",
+    "disable_git": true,
+  },
+  "minimum_contrast_for_highlights": 50.0,
+  "unnecessary_code_fade": 0.5,
+  "cursor_shape": "block",
+  "multi_cursor_modifier": "cmd_or_ctrl",
+  "buffer_line_height": {
+    "custom": 1.8,
+  },
+  "icon_theme": "Material Icon Theme",
+  "agent_ui_font_size": 21.0,
+  "base_keymap": "VSCode",
+  "minimap": {
+    "show": "never",
+  },
+  "buffer_font_fallbacks": ["Victor Mono", "Monaspace Krypton"],
+  "auto_indent_on_paste": true,
+
+  "buffer_font_family": "Fira Code",
+  "buffer_font_features": {
+    "calt": true,
+  },
+  "inlay_hints": {
+    "show_other_hints": false,
+    "show_parameter_hints": false,
+    "show_type_hints": false,
+    "show_value_hints": true,
+  },
+  "lsp_document_colors": "border",
+  "wrap_guides": [79],
+  "show_edit_predictions": false,
+  "experimental.theme_overrides": {
+    "background.appearance": "transparent",
+    "syntax": {
+      "keyword": { "color": "#9D70FF" },
+      "function": { "color": "#BCBEC4" },
+    },
+  },
+  "autosave": {
+    "after_delay": { "milliseconds": 500 },
+  },
+  "format_on_save": "on",
+  "restore_on_startup": "last_session",
+  "show_completions_on_input": true,
   "toolbar": {
     "breadcrumbs": false,
     "quick_actions": false,
@@ -135,5 +120,5 @@
   "tabs": {
     "file_icons": true,
   },
-  "current_line_highlight": "none",
+  "current_line_highlight": "none"
 }
