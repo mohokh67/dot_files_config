@@ -1,0 +1,6 @@
+home/.claude/settings.local.json
+home/.claude/history.jsonl
+home/.claude/sessions/
+home/.claude/backups/
+home/.claude/cache/
+home/.claude/projects/

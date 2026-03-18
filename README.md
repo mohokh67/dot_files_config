@@ -5,6 +5,7 @@
 ```sh
 git clone <repo> ~/dev/dotfiles
 brew install stow
+mkdir -p ~/.claude
 stow -d ~/dev/dotfiles -t ~ home
 ```
 

@@ -8,5 +8,8 @@ CVS
 _darcs
 \.bzr
 
+# repo-only — don't link to home
+README\.md
+
 # machine-specific — each machine manages its own
 settings\.local\.json
