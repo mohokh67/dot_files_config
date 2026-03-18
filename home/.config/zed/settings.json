@@ -55,7 +55,7 @@
     "metrics": false,
   },
   "ui_font_size": 27,
-  "buffer_font_size": 15,
+  "buffer_font_size": 16,
   "theme": "Gruvbox Dark Hard",
   "git": {
     "hunk_style": "staged_hollow",
@@ -110,8 +110,8 @@
   "restore_on_startup": "last_session",
   "show_completions_on_input": true,
   "toolbar": {
-    "breadcrumbs": false,
-    "quick_actions": false,
+    "breadcrumbs": true,
+    "quick_actions": true,
     "selections_menu": true,
   },
   "project_panel": {
@@ -120,5 +120,5 @@
   "tabs": {
     "file_icons": true,
   },
-  "current_line_highlight": "none"
+  "current_line_highlight": "none",
 }

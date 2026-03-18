@@ -1,0 +1,22 @@
+# stow defaults (must re-add — custom file replaces built-in defaults)
+\.git
+\.stow-local-ignore
+RCS
+CVS
+\.svn
+\.hg
+_darcs
+\.bzr
+
+# repo-only — don't link to home
+^CLAUDE\.md$
+README\.md
+
+# machine-specific — each machine manages its own
+settings\.local\.json
+
+# reference-only dirs — not managed by stow
+betterfox
+ghostly
+vscode
+zsh

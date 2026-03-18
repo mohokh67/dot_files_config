@@ -1,0 +1,12 @@
+# stow defaults (must re-add — custom file replaces built-in defaults)
+\.git
+\.stow-local-ignore
+RCS
+CVS
+\.svn
+\.hg
+_darcs
+\.bzr
+
+# machine-specific — each machine manages its own
+settings\.local\.json
