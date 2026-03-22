@@ -16,6 +16,7 @@ Stow creates symlinks in `~` pointing into this repo. Edit files here; changes p
 | File in "home" dir          | Target                        |
 | --------------------------- | ----------------------------- |
 | `.zshrc`                    | `~/.zshrc`                    |
+| `.gitconfig`                | `~/.gitconfig`                |
 | `.oh-my-posh.toml`          | `~/.oh-my-posh.toml`          |
 | `.config/zed/settings.json` | `~/.config/zed/settings.json` |
 | `.claude/CLAUDE.md`         | `~/.claude/CLAUDE.md`         |
