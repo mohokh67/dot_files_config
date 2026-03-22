@@ -45,6 +45,10 @@ eval "$(zoxide init --cmd cd zsh)"
 
 eval "$(atuin init zsh)"
 
+eval $(thefuck --alias)
+# You can use whatever you want as an alias, like for Mondays:
+eval $(thefuck --alias FUCK)
+
 ############################################ Functions
 lsofport() {
   if [ -z "$1" ]; then
@@ -57,6 +61,14 @@ lsofport() {
 mkcd() {
   mkdir -p "$1" && cd "$1"
 }
+
+# press CRTL + T and then check the preview with bat
+# If this command does not work, run this: "$(brew --prefix)/opt/fzf/install"
+eval "$(fzf --zsh)"
+export FZF_CTRL_T_OPTS="--preview 'bat --color=always --style=numbers --line-range=:500 {}'"
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
 
 ########################################### caeapace
 autoload -U compinit && compinit
@@ -72,11 +84,17 @@ alias reload='source ~/.zshrc;echo "ZSH aliases sourced."'
 
 alias c='clear'
 
+# Replace OS commands: Begin
+alias cat='bat'
+alias find='fd'
+
 # alias ls='ls --color=auto'
-alias ls="eza -l --icons --group-directories-first"
-alias ll="eza -la --icons --group-directories-first"
-alias lst="eza -l -T --icons --group-directories-first"
-alias lsta="eza -la -T --icons --group-directories-first"
+alias ls="eza --long --git --icons --group-directories-first"
+alias ll="eza -la --git --icons --group-directories-first"
+alias lst="eza -l -T --git --icons --group-directories-first"
+alias lsta="eza -la -T --git --icons --group-directories-first"
+
+# Replace OS commands: End
 
 alias cd..='cd ..'
 alias ..='cd ..'
@@ -94,6 +112,25 @@ alias home='cd ~'
 alias path='echo -e ${PATH//:/\\n}'
 alias now='date +"%T"'
 alias nowdate='date +"%d-%m-%Y"'
+
+# brew install ghostscript
+# this needs to be before gs(git status) alias for no confusion
+pdfcompress() {
+  local input="$1"
+  local output="${input%.pdf}_output.pdf"
+
+  command gs -sDEVICE=pdfwrite \
+    -dCompatibilityLevel=1.4 \
+    -dNOPAUSE -dQUIET -dBATCH \
+    -dDownsampleColorImages=true \
+    -dColorImageDownsampleType=/Bicubic \
+    -dColorImageResolution=120 \
+    -dJPEGQ=75 \
+    -sOutputFile="$output" \
+    "$input"
+
+    echo "$output created."
+}
 
 # Git
 alias gs='git status'
