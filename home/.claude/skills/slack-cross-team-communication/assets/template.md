@@ -1,17 +1,18 @@
 # Slack Message Template
 
 Use Slack mrkdwn format. Omit any section where user said skip/N/A.
+Add emoji based on urgency (see SKILL.md for conventions).
 
 ---
 
-*{TITLE}*
+{URGENCY_EMOJI} *{TITLE}*
 
 We are {CHANGE_TYPE} {SYSTEM_NAME}.
 
 *Why?*
 {STABILITY_BENEFITS}
 
-*Action Required By:* {DEADLINE}
+:warning: *Action Required By:* {DEADLINE}
 {CONSEQUENCE_IF_NOT_ACTED}
 
 *Risk/Blast Radius:*
@@ -19,7 +20,7 @@ We are {CHANGE_TYPE} {SYSTEM_NAME}.
 
 ---
 
-*Timeline*
+:calendar: *Timeline*
 
 {FOR_EACH_PHASE}
 • *Phase {N} ({DATE_RANGE}):* {PHASE_DESCRIPTION}
@@ -54,14 +55,14 @@ You need to act if you:
 {N}. {ACTION_DESCRIPTION}
 {END_FOR_EACH}
 
-*How do I know I'm done?*
+:white_check_mark: *How do I know I'm done?*
 {FOR_EACH_COMPLETION_CRITERIA}
 • {CRITERIA}
 {END_FOR_EACH}
 
 ---
 
-*Resources*
+:link: *Resources*
 
 • Jira: {JIRA_LINK}
 • Confluence: {CONFLUENCE_LINK}
@@ -74,5 +75,5 @@ You need to act if you:
 
 ---
 
-*Questions?*
+:question: *Questions?*
 Contact {CONTACT_PERSON} or ask in {SLACK_CHANNEL}
