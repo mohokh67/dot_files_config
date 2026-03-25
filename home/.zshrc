@@ -88,6 +88,9 @@ alias c='clear'
 alias cat='bat'
 alias find='fd'
 
+# install this with brew: cbonsai
+alias screensaver="cbonsai -S"
+
 # alias ls='ls --color=auto'
 alias ls="eza --long --git --icons --group-directories-first"
 alias ll="eza -la --git --icons --group-directories-first"
