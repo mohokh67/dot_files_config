@@ -25,7 +25,7 @@ config.colors = {
     cursor_border = '#7aa2f7'
 }
 
-config.window_decorations = 'RESIZE'
+-- config.window_decorations = 'RESIZE'
 
 config.keys = {
     {
