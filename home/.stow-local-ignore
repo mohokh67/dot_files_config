@@ -10,6 +10,7 @@ _darcs
 
 # repo-only — don't link to home
 README\.md
+\.DS_Store
 
 # machine-specific — each machine manages its own
 settings\.local\.json
